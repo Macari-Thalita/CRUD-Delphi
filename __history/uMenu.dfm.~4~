@@ -1,0 +1,40 @@
+object frmMenu: TfrmMenu
+  Left = 0
+  Top = 0
+  Caption = 'Menu principal'
+  ClientHeight = 442
+  ClientWidth = 628
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Menu = mnuPrincipal
+  TextHeight = 15
+  object mnuPrincipal: TMainMenu
+    Left = 280
+    Top = 16
+    object Menu1: TMenuItem
+      Caption = 'Cidades'
+      object N001Manuteno1: TMenuItem
+        Caption = '(001) Manuten'#231#227'o'
+      end
+    end
+    object Clientes1: TMenuItem
+      Caption = 'Clientes'
+      object N002Manuteno1: TMenuItem
+        Caption = '(002) Manuten'#231#227'o'
+      end
+    end
+    object Relatrios1: TMenuItem
+      Caption = 'Relat'#243'rios'
+      object N003Relatriodecidades1: TMenuItem
+        Caption = '(003) Relat'#243'rio de cidades'
+      end
+      object N004Relatriodeclientes1: TMenuItem
+        Caption = '(004) Relat'#243'rio de clientes'
+      end
+    end
+  end
+end

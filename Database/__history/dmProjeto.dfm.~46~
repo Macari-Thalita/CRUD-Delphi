@@ -1,0 +1,49 @@
+object DataModule1: TDataModule1
+  Height = 319
+  Width = 342
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=C:\DB\PROJETO2.FDB'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'Server=localhost'
+      'Port=3050'
+      'DriverID=FB')
+    Connected = True
+    LoginPrompt = False
+    Left = 104
+    Top = 24
+  end
+  object FDPhysFBDriverLink1: TFDPhysFBDriverLink
+    VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
+    Left = 104
+    Top = 152
+  end
+  object FDTable1: TFDTable
+    IndexFieldNames = 'CIDADE_ID'
+    Connection = FDConnection1
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'CIDADES'
+    Left = 104
+    Top = 96
+    object FDTable1CIDADE_ID: TIntegerField
+      FieldName = 'CIDADE_ID'
+      Origin = 'CIDADE_ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDTable1CIDADE_NOME: TStringField
+      FieldName = 'CIDADE_NOME'
+      Origin = 'CIDADE_NOME'
+      Required = True
+      Size = 100
+    end
+    object FDTable1CIDADE_UF: TStringField
+      FieldName = 'CIDADE_UF'
+      Origin = 'CIDADE_UF'
+      Required = True
+      FixedChar = True
+      Size = 2
+    end
+  end
+end
